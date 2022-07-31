@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    /* Memindahkan posisi ke-tengah dengan menggeser objek dari atas ke-bawah */
+    align-items: center;
+    /* Memindahkan posisi ke-tengah dengan menggeser dari kiri ke-kanan */
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #2C3333;
+}
+
+.wrapper,
+.wrapper .avatar,
+.social-icons a,
+.buttons button {
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.199);
+}
+
+.wrapper {
+    position: relative;
+    width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wrapper .avatar-area {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-area .inner-area {
+    height: calc(100%-25px);
+    width: calc(100%-25px);
+    border-radius: 50%;
+}
+
+.inner-area img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #395B64;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+    animation: pulse 1500ms infinite;
+}
+
+.wrapper .profile-name {
+    font-size: 21px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #2C3333;
+}
+
+.wrapper .profile-role {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #2C3333;
+}
+
+.wrapper .social-icons {
+    margin: 15px 0 25px 0;
+}
+
+.social-icons a {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    display: inline-flex;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.social-icons a:hover::before,
+.buttons button:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    background-color: #dadada;
+    color: #fff;
+}
+
+.buttons button:hover:before {
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.social-icons a i {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+
+.social-icons a.facebook i {
+    color: #2C3639;
+}
+
+.social-icons a.twitter i {
+    color: #2C3639;
+}
+
+.social-icons a.github i {
+    color: #2C3639;
+}
+
+button{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+
+button span{
+    position: relative;
+    z-index: 2;
+  }
+
+button:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #333;
+    transition: all .35s;
+  }
+  
+button:hover{
+    color: #fff;
+}
+  
+button:hover:after{
+    width: 100%;
+}
+
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(53, 53, 53, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(53, 53, 53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(53, 53, 53, 0);
+    }
+  }
